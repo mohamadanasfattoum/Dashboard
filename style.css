@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     color: white;
+    font-family: sans-serif;
 }
 
 body{
@@ -23,6 +24,8 @@ body{
 }
 ul{
     list-style: none;
+    position:relative;
+    height: 95%;
 }
 
 ul li a{
@@ -35,6 +38,23 @@ ul li a{
     display: flex;
     align-items: center;
     gap: 40px;
+    transition: .5s;
+}
+
+ul li a:hover, .active{
+    background-color: #ffffff55;
+}
 
 
+.log-out{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+}
+.log-out a{
+    background-color: #a00;
+}
+
+ul li a i{
+    font-size: 30px;
 }
