@@ -5,7 +5,7 @@ Landing Page Using Html, Css
 
 
 ### Demo
-Live Demo : https://mohamadanasfattoum.github.io/Dashboard//
+Live Demo : https://mohamadanasfattoum.github.io/Dashboard/
 
 
 ### project screenshot
