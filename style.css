@@ -43,7 +43,7 @@ body{
     transition: .5s;
 
 }
-.menu:hover{width: 300px;
+.menu:hover{width: 360px;
 }
 
 ul{
@@ -65,7 +65,7 @@ ul li a{
     transition: .5s;
 }
 
-ul li a:hover, .active, .data-info .box:hover{
+ul li a:hover, .active, .data-info .box:hover, td:hover{
     background-color: #ffffff55;
 }
 
@@ -90,6 +90,7 @@ ul li a i{
 .content{
     width: 100%;
     margin: 10px;
+    margin: .5rem;
 }
 
 .title-info{
@@ -121,7 +122,44 @@ ul li a i{
     display: flex;
     align-items: center;
     justify-content: space-around;
+
     
+}
+.box{
+    position: relative;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.box::after, .box::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 70%, blue, red);
+    /* background-color: red; */
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 8px;
+    animation: 4s spin linear infinite;
+}
+.box::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
 }
 
 
@@ -135,4 +173,40 @@ ul li a i{
 
 .data-info .box span{
     font-size: 30px;
+}
+
+
+table{
+    width: 100%;
+    text-align: center;
+    border-spacing: 8px;
+}
+
+
+td ,th{
+    background-color: #123;
+    height: 40px;
+    border-radius: 8px;
+}
+td:hover{
+    transform: rotate(360deg);
+    transition: 3s;
+}
+th{background-color: #0481ff;
+}
+
+.price, .count{
+    padding: 6px;
+    border-radius: 6px;
+
+}
+
+.price:hover{
+    background-color: green;
+
+}
+
+.count:hover{
+    background-color: gold;
+    color: black;
 }
