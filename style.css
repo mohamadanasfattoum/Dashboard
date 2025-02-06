@@ -19,6 +19,8 @@ body{
     flex-shrink: 0;
 }
 
+
+
 .img-box img{
     width: 100%;
     
@@ -55,7 +57,6 @@ ul{
 ul li a{
     display: block;
     text-decoration: none;
-    /* background-color: red; */
     padding: 10px;
     margin: 10px 0;
     border-radius: 8px;
@@ -75,6 +76,12 @@ ul li a:hover, .active, .data-info .box:hover, td:hover{
     bottom:0;
     width: 100%;
 }
+
+.log-out:hover{
+    transform: translateX(100px);
+    transition: 2s;
+}
+
 .log-out a{
     background-color: #a00;
 }
